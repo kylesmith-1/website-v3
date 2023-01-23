@@ -168,10 +168,17 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: #9bbed0;
   margin: 0 auto;
 }
 
+.line-longer-mf {
+  width: 320px;
+  height: 5px;
+  background-color: #9bbed0;
+  margin: 0 auto;
+  float: left;
+}
 /*--/ Title Left /--*/
 .title-box-2 {
   margin-bottom: 3rem;
@@ -338,7 +345,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0078ff;
+  background: #9bbed0;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -352,7 +359,7 @@ a:hover {
 }
 
 .back-to-top:hover {
-  background: #298eff;
+  background: #bbe2f5;
   color: #fff;
 }
 
@@ -1005,6 +1012,12 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.w-title .w-title-extended {
+  font-size: 1.0rem;
+  color: #5a5a5a;
+  font-style: italic;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1265,7 +1278,7 @@ a:hover {
 
 .card-blog .card-category-box {
   position: absolute;
-  text-align: center;
+  text-align: right;
   top: -16px;
   left: 15px;
   right: 15px;
@@ -1278,7 +1291,7 @@ a:hover {
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #0078ff;
+  background-color: #9bbed0;
   border-radius: 4px;
 }
 
@@ -1472,7 +1485,7 @@ footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
-  background: #0062d3;
+  background: #9bbed0;
 }
 
 footer .copyright {
