@@ -3,690 +3,332 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kyle Smith</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="description" content="Kyle Smith is a Boston-based software engineer building test automation and infrastructure for embedded and IoT products.">
+  <meta name="theme-color" content="#2b7fff">
+  <link rel="icon" href="assets/img/me_bw_portrait.jpg">
 
-  <!-- Favicons -->
-  <link href="assets/img/me_bw_portrait.jpg" rel="icon">
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: DevFolio - v4.10.0
-  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/site.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">kyl3smith<span style="color: #9bbed0">.com</span></a></h1>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto " href="#work">Work Experience</a></li>
-          <li><a class="nav-link scrollto " href="#interests">Interests</a></li>
-          <li><a class="nav-link scrollto " href="assets/pdf/Kyle_Smith_Resume_Sep_2026.pdf" target="_blank">Resume</a></li>
-          <li><a class="nav-link scrollto " href="https://www.linkedin.com/in/kyle-smith-dev/" target="_blank">LinkedIn</a></li>
-          <li><a class="nav-link scrollto " href="https://github.com/kylesmith-1" target="_blank">GitHub</a></li>
+  <header class="nav">
+    <div class="nav__bar">
+      <a class="nav__logo" href="#hero">kyl3smith<span>.com</span></a>
+      <nav aria-label="Main">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li class="nav__sep" aria-hidden="true"></li>
+          <li><a href="assets/pdf/Kyle_Smith_Resume_Sep_2026.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text" aria-hidden="true"></i>Resume</a></li>
+          <li><a href="https://www.linkedin.com/in/kyle-smith-dev/" target="_blank" rel="noopener"><i class="bi bi-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+          <li><a href="https://github.com/kylesmith-1" target="_blank" rel="noopener"><i class="bi bi-github" aria-hidden="true"></i>GitHub</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-
+      <button class="nav__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/boston-roadmap.png)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 id="primary" class="hero-title mb-4">Hi there, I'm <span id="primary" class="hero-title mb-4">Kyle!</span></h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Software Engineer"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+  <main>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero__map" aria-hidden="true"></div>
+      <div class="blob blob--1" aria-hidden="true"></div>
+      <div class="blob blob--2" aria-hidden="true"></div>
+      <div class="blob blob--3" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div>
+          <p class="hero__hello rise" style="--i: 0"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Boston, MA</p>
+          <h1 class="hero__title rise" style="--i: 1">Hi there, I'm <mark>Kyle!</mark></h1>
+          <p class="hero__role rise" style="--i: 2"><span class="typed">Software Engineer</span><span class="caret" aria-hidden="true"></span></p>
+          <div class="hero__cta rise" style="--i: 3">
+            <a class="btn btn--primary" href="mailto:me@kyl3smith.com"><i class="bi bi-envelope-fill" aria-hidden="true"></i>Say hi</a>
+            <a class="btn btn--ghost" href="#about">More about me</a>
+          </div>
+        </div>
+
+        <div class="hero__photo pop">
+          <figure class="polaroid" style="--tilt: 4deg; --ratio: 1 / 1; --pos: 62% center">
+            <img src="assets/img/me_bw_portrait.jpg" alt="Kyle smiling in front of the Charles River" width="1440" height="954">
+          </figure>
         </div>
       </div>
-    </div>
-  </div><!-- End Hero Section -->
 
-  <main id="main">
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"></a>
+    </section>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container about">
+        <figure class="polaroid reveal" style="--tilt: -4deg">
+          <img src="assets/img/me_graduating_bw.jpg" alt="Kyle in a cap and gown in front of the Northeastern University sign" width="2048" height="1358" loading="lazy">
+        </figure>
+
+        <div class="about__text reveal" style="--i: 1">
+          <h2 class="section__title"><span class="squiggle">About me</span></h2>
+          <p>
+            I'm Kyle (he/they), a Boston-based software engineer with 5+ years of experience building test automation and infrastructure
+            for embedded and IoT products. I'm currently a Senior Software Engineer in Test at Cambridge Mobile Telematics, working on
+            embedded firmware. Before that, I was at Bose, building end-to-end automation for Bluetooth/WiFi audio products across
+            embedded Linux, RTOS firmware, and companion mobile apps.
+          </p>
+          <p>
+            I don't keep this site the most up to date, but if you've landed here, feel free to shoot me an email and reach out!
+          </p>
+          <ul class="chips">
+            <li><span class="chip"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>Boston, MA</span></li>
+            <li><a class="chip" href="mailto:me@kyl3smith.com"><i class="bi bi-envelope-fill" aria-hidden="true"></i>me@kyl3smith.com</a></li>
+            <li><a class="chip" href="tel:+18629268622"><i class="bi bi-telephone-fill" aria-hidden="true"></i>(862) 926-8622</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <svg class="divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C240 90 480 0 720 36 S1200 84 1440 30 V80 H0Z"/></svg>
+    <section id="work" class="section section--sky">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/me_bw_portrait.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Kyle Smith</span><span><i>(he/they)</i></span></p>
-                        <p><span class="title-s">Location: </span> <span>Boston, MA</span></p>
-                        <p><span class="title-s">Email: </span> <span>me@kyl3smith.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>(862) 926-8622</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">85%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PHP</span> <span class="pull-right">50%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div> -->
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About Me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      I'm Kyle, a Boston-based software engineer with 5+ years of experience building test automation and infrastructure
-                      for embedded and IoT products. I'm currently an Automation Engineer at Bose, working on end-to-end automation for
-                      Bluetooth/WiFi audio products across embedded Linux, RTOS firmware, and companion mobile apps.
-                    </p>
-                    <p class="lead">
-                      I'm don't keep this site the most up to date, but if you've landed here, feel free to shoot me an email and reach out!
-                    </p>
-                  </div>
+        <div class="work__head">
+          <div class="reveal">
+            <h2 class="section__title"><span class="squiggle">Work experience</span></h2>
+            <p class="section__lede">Where I am now, and where I've been! Tap a <i class="bi bi-plus-lg" aria-hidden="true"></i><span class="visually-hidden">plus</span> to dig into the details.</p>
+          </div>
+          <figure class="polaroid reveal" style="--tilt: 3deg; --i: 1">
+            <img src="assets/img/me_in_lab.png" alt="Kyle giving a thumbs up in a hardware lab" width="1206" height="678" loading="lazy">
+          </figure>
+        </div>
+
+        <div class="jobs">
+          <article class="job job--featured reveal" style="--i: 0">
+            <div class="job__logo">
+              <img src="assets/img/cmt_rectangle_logo.jpg" alt="Cambridge Mobile Telematics logo" width="960" height="600" loading="lazy">
+            </div>
+            <div class="job__head">
+              <div>
+                <span class="badge">Current role</span>
+                <h3 class="job__name">CMT.AI</h3>
+                <p class="job__role">Senior Software Engineer in Test, Embedded Firmware</p>
+                <p class="job__date">2026 – Present</p>
+              </div>
+              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="cmt-details" aria-label="Show details for CMT.AI">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="job__details" id="cmt-details">
+              <div class="job__details-inner">
+                <div class="job__body">
+                <p><strong>Cambridge Mobile Telematics</strong> is a telematics service provider that uses sensor data and AI to make the world's roads and drivers safer.</p>
+                <p>I joined Cambridge Mobile Telematics in 2026 as a <strong>Senior Software Engineer in Test</strong>, working on embedded firmware.</p>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
+
+          <article class="job reveal" style="--i: 1; --logo-bg: #000">
+            <div class="job__logo">
+              <img src="assets/img/bose_rectangle_logo.jpg" alt="Bose logo" width="960" height="600" loading="lazy">
+            </div>
+            <div class="job__head">
+              <div>
+                <h3 class="job__name">Bose Corporation</h3>
+                <p class="job__role">Automation Engineer II, Software QA</p>
+                <p class="job__date">Apr 2023 – 2026</p>
+              </div>
+              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="bose-details" aria-label="Show details for Bose Corporation">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="job__details" id="bose-details">
+              <div class="job__details-inner">
+                <div class="job__body">
+                <p><strong>Bose</strong> is a global leader in audio products, research, and technology.</p>
+                <p>I joined Bose in April 2023 as an <strong>Automation Engineer</strong> on the Software QA team, focusing on end-to-end test automation for the premium consumer audio products.</p>
+                <h4>Some noteworthy accomplishments from my time there</h4>
+                <ul>
+                  <li>Owned E2E automation QA for the Bluetooth Portable Speakers suite on a shared ARM SoC platform, delivering the platform's fastest regression cycles and fewest critical defects at launch</li>
+                  <li>Co-developed the first automation framework to cover embedded Linux, RTOS, and companion Android/iOS apps in one codebase, replacing three siloed frameworks; adopted company-wide as a base for teams authoring their own tests with coding agents (Python, Appium)</li>
+                  <li>Rebuilt the E2E automation pipeline in CI/CD, restoring trust in build promotions and eliminating hundreds of hours of manual testing (Jenkins, Groovy)</li>
+                  <li>Designed next-generation hardware testbeds, consolidating 100+ legacy Windows nodes into ~20 Ansible-provisioned Linux/macOS systems wired into CI/CD (Ansible)</li>
+                  <li>Developed automation for Google Fast Pair integration, fulfilling certification requirements for dozens of product releases</li>
+                  <li>Interviewed candidates, onboarded new full-time and contract team members, and led team code/design reviews</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal" style="--i: 2; --logo-bg: #3c3c56">
+            <div class="job__logo">
+              <img src="assets/img/starry_logo_rectangle.jpg" alt="Starry logo" width="960" height="600" loading="lazy">
+            </div>
+            <div class="job__head">
+              <div>
+                <h3 class="job__name">Starry, Inc.</h3>
+                <p class="job__role">Systems Validation Engineer</p>
+                <p class="job__date">Jul 2021 – Jan 2023</p>
+              </div>
+              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="starry-details" aria-label="Show details for Starry, Inc.">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="job__details" id="starry-details">
+              <div class="job__details-inner">
+                <div class="job__body">
+                <p><strong>Starry</strong> is a Boston-based internet service provider, using in-house designed hardware to provide millimeter wave fixed wireless internet to ~100,000 customers across the US.</p>
+                <p>I joined in July 2021 as a <strong>Validation Engineering Co-op</strong>, working full time for six months, and part time for another five months while in school, until I graduated and started in June 2022 as a full-time <strong>Software Engineer in Test</strong>.</p>
+                <h4>Some noteworthy accomplishments from my time there</h4>
+                <ul>
+                  <li>Greenlit new firmware releases for feature coverage, field viability, on devices providing tens of thousands of customers with internet access</li>
+                  <li>Developed hundreds of automated regression test cases within OO codebases; covering functionality of systemd services and general operations on embedded Linux WiFi devices (Python)</li>
+                  <li>Cut time of release cycles by 30%+ by automating validation infrastructure, creating internal data tracking tools (Python, Jenkins, Google Drive API, Elasticsearch)</li>
+                  <li>Built out and maintained dozens of hardware test beds, incl. networking, to allow optimal automated interfacing with proprietary hardware systems</li>
+                  <li>Supported rapid team growth with regular constructive code review and onboarding of new members</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal" style="--i: 1">
+            <div class="job__logo">
+              <img src="assets/img/heila_rectangle_graphic.jpg" alt="Heila Technologies logo" width="960" height="600" loading="lazy">
+            </div>
+            <div class="job__head">
+              <div>
+                <h3 class="job__name">Heila Technologies</h3>
+                <p class="job__role">Software Engineering Co-op</p>
+                <p class="job__date">Jun 2020 – Dec 2020</p>
+              </div>
+              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="heila-details" aria-label="Show details for Heila Technologies">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="job__details" id="heila-details">
+              <div class="job__details-inner">
+                <div class="job__body">
+                <p><strong>Heila Technologies</strong> is a cleantech startup out of MIT, specializing in custom hardware/software for managing microgrids, and acquired by Kohler Power since I completed working there.</p>
+                <p>I joined Heila in June 2020 for seven months as a <strong>Software Engineering Co-op</strong>, moving rapidly to fulfill different responsibilities as the company grew in size.</p>
+                <h4>Some noteworthy accomplishments from my time there</h4>
+                <ul>
+                  <li>Implemented backend REST API for a customer-facing web portal, representing power-system data of embedded devices (Java OSGi)</li>
+                  <li>Automated inter-IoT-device configuration operations, converting hours of manual work to minutes of passive runtime (Python, Ansible, Bash)</li>
+                  <li>Initiated product planning and development of initial IoT cloud data pipeline (Kafka, Zookeeper)</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal" style="--i: 2">
+            <div class="job__logo">
+              <img src="assets/img/true_fit_rectangle_logo.jpg" alt="True Fit logo" width="960" height="600" loading="lazy">
+            </div>
+            <div class="job__head">
+              <div>
+                <h3 class="job__name">True Fit</h3>
+                <p class="job__role">DevOps Engineering Co-op</p>
+                <p class="job__date">Jan 2020 – Apr 2020</p>
+              </div>
+              <button class="job__toggle" type="button" aria-expanded="false" aria-controls="true-fit-details" aria-label="Show details for True Fit">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="job__details" id="true-fit-details">
+              <div class="job__details-inner">
+                <div class="job__body">
+                <p><strong>The True Fit Corporation</strong> is a Fashion SaaS company, offering a variety of software tools to ecommerce retailers, including a customer-facing widget that helps customers identify which size to buy of an item, based on a quickly generated profile.</p>
+                <p>I joined True Fit in January 2020 for four months as a <strong>DevOps Engineering Co-op</strong>.</p>
+                <h4>Some noteworthy accomplishments from my time there</h4>
+                <ul>
+                  <li>Developed internal automation scripts interfacing with dozens of internal/external APIs to streamline developer processes for a team of 100+ engineers (Python, Bash, PostgreSQL)</li>
+                  <li>Facilitated migration from AWS to GCP infrastructure, debugging DevOps jobs and scripts (Python)</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-    </section><!-- End About Section -->
+    </section>
+    <svg class="divider divider--flip" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34 C260 0 520 86 760 44 S1220 0 1440 46 V80 H0Z"/></svg>
 
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/me_graduating_bw.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
-
-    <!-- ======= Work Experience Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
+    <!-- Interests -->
+    <section id="interests" class="section">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Work Experience
-              </h3>
-              <p class="subtitle-a">
-                Where I am now, and where I've been!
+        <div class="section__head--center reveal">
+          <h2 class="section__title"><span class="squiggle">Random hobbies &amp; interests!</span></h2>
+        </div>
+
+        <div class="hobbies">
+          <article class="hobby reveal" style="--tilt: -2.5deg; --i: 0">
+            <div class="hobby__img"><img src="assets/img/lighthouse_film.jpg" alt="A white lighthouse against a deep blue sky, shot on film" width="3024" height="2005" loading="lazy"></div>
+            <div class="hobby__text">
+              <h3>Film Photography</h3>
+              <p>
+                I'm by no means the best photographer out there, but I have an old Canon GII that I love to bring around
+                and use to capture pictures of cool places and my friends! Generally I shoot Fuji Superia 400 ISO color,
+                but occasionally Ilford B&amp;W as well.
               </p>
-              <div class="line-mf"></div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="work-box">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <a href="assets/img/bose_rectangle_logo.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                    <div class="work-img">
-                      <img src="assets/img/bose_rectangle_logo.jpg" alt="Bose Corporation Logo" class="img-fluid">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-8">
-                  <div class="work-content">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <h2 class="w-title">Bose Corporation</h2>
-                        <div class="w-more">
-                          <span class="w-ctegory">Automation Engineer II, Software QA</span>
-                        </div>
-                        <div class="w-more">
-                          <span class="w-date">Apr 2023 - Present</span>
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="w-like">
-                          <div onclick="openDetails('bose_information');"><span class="bi bi-plus-circle"></span></div>
-                        </div>
-                      </div>
-                      <div class="w-more" id="bose_information" style="display: none;">
-                        <span class="w-ctegory">
-                          <br>
-                          <div class="line-longer-mf"></div>
-                          <br>
-                          <b>Bose</b> is a global leader in audio products, research, and technology.<br><br>
-                          I joined Bose in April 2023 as an <b>Automation Engineer</b> on the Software QA team, focusing on end-to-end
-                          test automation for the premium consumer audio products.<br><br>
-                          Some Noteworthy Accomplishments So Far:<br><br>
-                          ● Owned E2E automation QA for the Bluetooth Portable Speakers suite on a shared ARM SoC platform, delivering
-                          the platform's fastest regression cycles and fewest critical defects at launch<br>
-                          ● Co-developed the first automation framework to cover embedded Linux, RTOS, and companion Android/iOS apps in
-                          one codebase, replacing three siloed frameworks; adopted company-wide as a base for teams authoring their own
-                          tests with coding agents (Python, Appium)<br>
-                          ● Rebuilt the E2E automation pipeline in CI/CD, restoring trust in build promotions and eliminating hundreds of
-                          hours of manual testing (Jenkins, Groovy)<br>
-                          ● Designed next-generation hardware testbeds, consolidating 100+ legacy Windows nodes into ~20
-                          Ansible-provisioned Linux/macOS systems wired into CI/CD (Ansible)<br>
-                          ● Developed automation for Google Fast Pair integration, fulfilling certification requirements for dozens of
-                          product releases<br>
-                          ● Interviewed candidates, onboarded new full-time and contract team members, and led team code/design reviews<br>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/starry_logo_rectangle.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/starry_logo_rectangle.jpg" alt="Starry, Inc. Graphic" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Starry, Inc.</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Systems Validation Engineer</span>
-                    </div>
-                    <div class="w-more">
-                      <span class="w-date">Jul 2021 - Jan 2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <div onclick="openDetails('starry_information');"><span class="bi bi-plus-circle"></span></div>
-                    </div>
-                  </div>
-                  <div class="w-more" id="starry_information" style="display: none;">
-                    <span class="w-ctegory">
-                      <br>
-                      <div class="line-longer-mf"></div>
-                      <br>
-                      <b>Starry</b> is a Boston-based internet service provider, using in-house designed hardware to provide millimeter wave fixed wireless
-                      internet to ~100,000 customers across the US.<br><br>
-                      I joined in July 2021 as a <b>Validation Engineering Co-op</b>, working full time for six months, and part time for another five months while in school,
-                      until I graduated and started in June 2022 as a full-time <b>Software Engineer in Test</b>.<br><br>
-                      Some Noteworthy Accomplishments From My Time There:<br><br>
-                      ● Greenlit new firmware releases for feature coverage, field viability, on devices providing tens of 
-                      thousands of customers with internet access<br>
-                      ● Developed hundreds of automated regression test cases within OO codebases; covering functionality of
-                      systemd services and general operations on embedded Linux WiFi devices (Python)<br>
-                      ● Cut time of release cycles by 30%+ by automating validation infrastructure, creating internal data tracking
-                      tools (Python, Jenkins, Google Drive API, Elasticsearch)<br>
-                      ● Built out and maintained dozens of hardware test beds, incl. networking, to allow optimal automated
-                      interfacing with proprietary hardware systems<br>
-                      ● Supported rapid team growth with regular constructive code review and onboarding of new members<br>
-                    </span> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/heila_rectangle_graphic.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/heila_rectangle_graphic.jpg" alt="Heila Technologies Logo" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Heila Technologies</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Software Engineering Co-op</span>
-                    </div>
-                    <div class="w-more">
-                      <span class="w-date">Jun 2020 - Dec 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <div onclick="openDetails('heila_information');"><span class="bi bi-plus-circle"></span></div>
-                    </div>
-                  </div>
-                  <div class="w-more" id="heila_information" style="display: none;">
-                    <span class="w-ctegory">
-                      <br>
-                      <div class="line-longer-mf"></div>
-                      <br>
-                      <b>Heila Technologies</b> is a cleantech startup out of MIT, specializing in custom hardware/software for managing 
-                      microgrids, and acquired by Kohler Power since I completed working there.<br><br>
-                      I joined Heila in June 2020 for seven months as a <b>Software Engineering Co-op</b>, moving rapidly to fulfill different responsibilities
-                      as the company grew in size.<br><br>
-                      Some Noteworthy Accomplishments From My Time There:<br><br>
-                      ● Implemented backend REST API for a customer-facing web portal, representing power-system data of
-                      embedded devices (Java OSGi)<br>
-                      ● Automated inter-IoT-device configuration operations, converting hours of manual work to minutes of
-                      passive runtime (Python, Ansible, Bash)<br>
-                      ● Initiated product planning and development of initial IoT cloud data pipeline (Kafka, Zookeeper)<br>
-                    </span> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/true_fit_rectangle_logo.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/true_fit_rectangle_logo.jpg" alt="True Fit Technologies Logo" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">True Fit</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">DevOps Engineering Co-op</span>
-                    </div>
-                    <div class="w-more">
-                      <span class="w-date">Jan 2020 - Apr 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <div onclick="openDetails('true_fit_information');"><span class="bi bi-plus-circle"></span></div>
-                    </div>
-                  </div>
-                  <div class="w-more" id="true_fit_information" style="display: none;">
-                    <span class="w-ctegory">
-                      <br>
-                      <div class="line-longer-mf"></div>
-                      <br>
-                      <b>The True Fit Corporation</b> is a Fashion SaaS company, offering a variety of software tools to ecommerce retailers, 
-                      including a customer-facing widget that helps customers identify which size to buy of an item, based on
-                      a quickly generated profile.<br><br>
-                      I joined True Fit in January 2020 for four months as a <b>DevOps Engineering Co-op</b>.<br><br>
-                      Some Noteworthy Accomplishments From My Time There:<br><br>
-                      ● Developed internal automation scripts interfacing with dozens of internal/external APIs to streamline
-                      developer processes for a team of 100+ engineers (Python, Bash, PostgreSQL)<br>
-                      ● Facilitated migration from AWS to GCP infrastructure, debugging DevOps jobs and scripts (Python)<br>
-                    </span> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Work Experience Section -->
+          </article>
 
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          <article class="hobby reveal" style="--tilt: 1.5deg; --i: 1">
+            <div class="hobby__img"><img src="assets/img/diy_earrings.jpg" alt="A pair of hand-cast pewter earrings set with blue stones" width="1000" height="666" loading="lazy"></div>
+            <div class="hobby__text">
+              <h3>DIY Metal Casting</h3>
+              <p>
+                A while back I discovered you can get started metal casting pewter without too many crazy materials,
+                as the alloy melts at a pretty accessible ~450°F. I create clay models and silicone molds to make DIY knick-knacks and jewelry,
+                such as these earrings for a friend!
               </p>
-              <div class="line-mf"></div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Photography</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Responsive Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Graphic Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Marketing Services</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- End Services Section -->
+          </article>
 
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/me_in_lab.png)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
-
-    <!-- ======= Blog Section ======= -->
-    <section id="interests" class="blog-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Random Hobbies & Interests!
-              </h3>
-              <!-- <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          <article class="hobby reveal" style="--tilt: -1.5deg; --i: 2">
+            <div class="hobby__img"><img src="assets/img/marseille_pic.jpg" alt="Rocky islands and blue sea off the coast of Marseille" width="2048" height="1358" loading="lazy"></div>
+            <div class="hobby__text">
+              <h3>Travel</h3>
+              <p>
+                I love travelling and seeing new places (near or far) whenever I get the chance! Above is a shot from islands off the coast
+                of Marseille, France, accessible by an easy 12€ ferry ride and definitely an awesome spot to check out if you ever happen upon the area!
               </p>
-              <div class="line-mf"></div> -->
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <img src="assets/img/lighthouse_film.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <!-- <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Lighthouse, Massachusetts.</h6>
-                  </div>
-                </div> -->
-                <h3 class="card-title">Film Photography</h3>
-                <p class="card-description">
-                  I'm by no means the best photographer out there, but I have an old Canon GII that I love to bring around
-                  and use to capture pictures of cool places and my friends! Generally I shoot Fuji Superia 400 ISO color, 
-                  but occasionally Ilford B&W as well.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <img src="assets/img/diy_earrings.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <!-- <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">DIY Metal Casting</h6>
-                  </div>
-                </div> -->
-                <h3 class="card-title">DIY Metal Casting</h3>
-                <p class="card-description">
-                  A while back I discovered you can get started metal casting pewter without too many crazy materials,
-                  as the alloy melts at a pretty accessible ~450°F. I create clay models and silicone molds to make DIY knick-knacks and jewelry,
-                  such as these earrings for a friend!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <img src="assets/img/marseille_pic.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <!-- <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Travel</h6>
-                  </div>
-                </div> -->
-                <h3 class="card-title">Travel</h3>
-                <p class="card-description">
-                  I love travelling and seeing new places (near or far) whenever I get the chance! Above is a shot from islands off the coast
-                  of Marseille, France, accessible by an easy 12€ ferry ride and definitely an awesome spot to check out if you ever happen upon the area!
-                </p>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
-    </section><!-- End Blog Section -->
+    </section>
 
-    <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Send Message Us
-                      </h5>
-                    </div>
-                    <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                        expedita aperiam aliquid at.
-                        Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                        mollitia inventore?
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                        <li><span class="bi bi-phone"></span> (617) 557-0089</li>
-                        <li><span class="bi bi-envelope"></span> contact@example.com</li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- End Contact Section -->
+  </main>
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer>
+  <svg class="footer__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44 C200 0 420 80 720 40 S1240 0 1440 40 V80 H0Z"/></svg>
+  <footer class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <div class="credits">
-              <span class="copyright">Thanks to the folks at BootstrapMade where I got a template to use as a base for this site!</span><br>
-              <span class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="footer__hi">Thanks for stopping by!</p>
+      <a class="footer__mail" href="mailto:me@kyl3smith.com">me@kyl3smith.com</a>
+      <ul class="footer__social">
+        <li><a href="https://www.linkedin.com/in/kyle-smith-dev/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/kylesmith-1" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+        <li><a href="assets/pdf/Kyle_Smith_Resume_Sep_2026.pdf" target="_blank" rel="noopener" aria-label="Resume"><i class="bi bi-file-earmark-text" aria-hidden="true"></i></a></li>
+      </ul>
+      <p class="footer__fine">&copy; <span class="year">2026</span> Kyle Smith</p>
     </div>
-  </footer><!-- End  Footer -->
+  </footer>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#hero" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/site.js"></script>
 </body>
 
 </html>
